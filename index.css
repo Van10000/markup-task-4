@@ -102,18 +102,35 @@ article .description
     width: 350px;
 }
 
+input:not(:checked) ~ article .description
+{
+    display: none;
+}
+
+input:checked ~ article .small-description
+{
+    display: none;
+}
+
 .description:before
+{
+    content: 'Полное описание:';
+}
+
+.small-description:before
 {
     content: 'Краткое описание:';
 }
 
-.description
+.description,
+.small-description
 {
     font-weight: bold;
     font-size: 20px;
 }
 
-.description-text
+.description-text,
+.small-description-text
 {
     font-weight: normal;
     font-size: 17px;
