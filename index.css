@@ -9,18 +9,6 @@
     opacity: 1;
 }
 
-img[src^='full'],
-img[src^='empty']
-{
-    width: 20px;
-}
-
-.category span,
-.category:before
-{
-    opacity: .5;
-}
-
 .name
 {
     white-space: nowrap;
@@ -28,86 +16,59 @@ img[src^='empty']
     text-overflow: ellipsis;
     max-width: 350px;
     font-size: 30px;
+    width: fit-content;
 }
 
-.name a:hover
+.name:hover
 {
-    color: #00008b;
+    color: #700;
 }
 
-.price
-{
-    color: #8b0000;
-}
-
-.previous-price
-{
-    color: rgba(128, 128, 128, .7);
-    text-decoration: line-through;
-}
-
-.category:before
-{
-    content: 'Категория: ';
-}
-
-.category span:hover
-{
-    opacity: .8;
-}
-
-.category
-{
-    font-size: 15px;
-}
-
-article:hover
+.cat-article:hover
 {
     background-color: rgba(139, 69, 19, .1);
 }
 
-section
+.picture,
+.information,
+.small-description,
+.description
 {
     padding: 10px;
 }
 
-input:not(:checked) ~ article
+.list:not(:checked) ~ .cat-article
 {
     display: inline-block;
 }
 
-input:checked ~ article section
-{
-    display: inline-block;
-    vertical-align: top;
-}
-
-article
+.cat-article
 {
     vertical-align: top;
 }
 
-input:checked ~ article
+.list:checked ~ .cat-article
 {
     display: block;
+    width: fit-content;
 }
 
-input:checked ~ article .information
-{
-    width: 300px;
-}
-
-article .description
+.list:checked ~ .cat-article .information
 {
     width: 350px;
 }
 
-input:not(:checked) ~ article .description
+.cat-article .description
+{
+    width: 350px;
+}
+
+.list:not(:checked) ~ .cat-article .description
 {
     display: none;
 }
 
-input:checked ~ article .small-description
+.list:checked ~ .cat-article .small-description
 {
     display: none;
 }
